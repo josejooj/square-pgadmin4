@@ -14,3 +14,5 @@ With this project, you will be able to host a fully functional and accessible pg
 - Open the `squarecloud.app` file
   - Edit the line `SUBDOMAIN=pgadmin-nocache-<RANDOM_TEXT_HERE_WITH_MAX_46_CHARACTERS>`
   - Example: `SUBDOMAIN=pgadmin-nocache-fc051a0bb46d438bae5157464ec6c1c8`
+- Zip the files `.env`, `main.py`, `config_local.py`, `squarecloud.app` and `requirements.txt`
+- Upload this zip to Square Cloud
