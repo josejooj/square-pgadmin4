@@ -15,7 +15,7 @@ MAX_LOGIN_ATTEMPTS = 3
     DEBUG    10
     NOTSET    0
 """
-CONSOLE_LOG_LEVEL = 10 # debug
+CONSOLE_LOG_LEVEL = 20 # debug
 
 # Define some directories
 DATA_DIR = "/application/.pgadmin4"
