@@ -1,11 +1,12 @@
-import os, subprocess, dotenv
+import os, subprocess, dotenv, sys
 
 # Load .env file
 dotenv.load_dotenv()
 
 # Define some paths to use later
+PYTHON_VERSION = ".".join(sys.version.split(".")[0:2])
 APPLICATION_PATH = os.getcwd()
-PGADMIN_PATH = f"{APPLICATION_PATH}/.local/lib/python3.11/site-packages/pgadmin4"
+PGADMIN_PATH = f"{APPLICATION_PATH}/.local/lib/python{PYTHON_VERSION}/site-packages/pgadmin4"
 
 # Create private pgadmin folder
 # This folder will store database, log, and another things about pgAdmin
