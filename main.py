@@ -3,8 +3,9 @@ import os, subprocess, dotenv, sys
 # Load .env file
 dotenv.load_dotenv()
 
-# Define some paths to use later
+# Define some constants and paths to use later
 PYTHON_VERSION = ".".join(sys.version.split(".")[0:2])
+CPU_COUNT = os.cpu_count()
 APPLICATION_PATH = os.getcwd()
 PGADMIN_PATH = f"{APPLICATION_PATH}/.local/lib/python{PYTHON_VERSION}/site-packages/pgadmin4"
 
@@ -26,7 +27,7 @@ command = [
     # Changing this may cause problems with CSRF!
     "--workers=1", 
     # Setup threads count
-    '--threads=36',
+    f'--threads={CPU_COUNT}',
     # tells gunicorn the application it will run
     "pgAdmin4:app"
 ]
